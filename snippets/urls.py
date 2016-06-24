@@ -1,11 +1,10 @@
 from django.conf.urls import url, include
-from rest_framework.urlpatterns import format_suffix_patterns
-from snippets import views
-from snippets.views import SnippetViewSet, UserViewSet, api_root
+
 from rest_framework import renderers
-from django.conf.urls import url, include
-from snippets import views
 from rest_framework.routers import DefaultRouter
+
+from snippets.views import SnippetViewSet, UserViewSet
+from snippets import views
 
 
 snippet_list = SnippetViewSet.as_view({
